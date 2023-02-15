@@ -22,7 +22,7 @@ function getNumberOfElements() {
     );
   }
 }
-console.log(getNumberOfElements());
+getNumberOfElements();
 
 // const elementNumber = document.querySelector(".item ul");
 // console.log(elementNumber);

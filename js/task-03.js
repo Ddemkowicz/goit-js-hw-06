@@ -18,6 +18,6 @@ const gallery = document.querySelector(".gallery");
 for (let i = 0; i < images.length; i++) {
   gallery.insertAdjacentHTML(
     "afterbegin",
-    `<li><img src=${images[i].url} alt=${images[i].alt}</li>`
+    `<li><img class="img" src=${images[i].url} alt=${images[i].alt}</li>`
   );
 }

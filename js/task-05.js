@@ -4,8 +4,9 @@ anonymous.textContent = "Anonymous";
 
 const textInput = document.querySelector("input");
 textInput.addEventListener("input", (e) => {
-  if ((textInput.textContent = "")) {
+  if (e.currentTarget.value === "") {
     anonymous.textContent = "Anonymous";
+  } else {
+    anonymous.textContent = e.currentTarget.value;
   }
-  anonymous.textContent = e.currentTarget.value;
 });

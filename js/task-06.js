@@ -1,10 +1,16 @@
 const input = document.querySelector("input");
-
+console.log(input.dataset);
 input.addEventListener("blur", (ev) => {
-  if (input.length === input.dataset.action) {
+  console.log(input.value.length);
+  console.log(input.dataset.length);
+  if (input.value.length == input.dataset.length) {
     input.setAttribute("class", "valid");
-  } else if (input.length !== input.dataset.action) {
+  } else if (
+    input.value.length != input.dataset.length &&
+    input.value.length > 0
+  ) {
     input.setAttribute("class", "invalid");
+  } else {
+    input.removeAttribute("class");
   }
 });
-// console.log(input.classList);s
